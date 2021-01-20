@@ -1,25 +1,33 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                          template.tex
 %
-% LaTeX template for papers conforming to the United States Sections of
-% the Combustion Institute style guide.
+% LaTeX template for papers for the European Combustion Meetings
 %
 % Authors:
-%     Bryan W. Weber, University of Connecticut
-%     Kyle E. Niemeyer, Oregon State University
+%     Mark E. Fuller, RWTH Aachen University
+%
+% Developed by modifying template.tex from the ussci class:
+%
+	% LaTeX template for papers conforming to the United States Sections of
+	% the Combustion Institute style guide.
+	%
+	% Authors:
+	%     Bryan W. Weber, University of Connecticut
+	%     Kyle E. Niemeyer, Oregon State University
+	%
+	% The source for this template can be found at
+	% https://github.com/pr-omethe-us/ussci-latex-template
 %
 % This work is licensed under the Creative Commons Attribution 4.0
 % International License. To view a copy of this license, visit
 % http://creativecommons.org/licenses/by/4.0/.
 %
-% The source for this template can be found at
-% https://github.com/pr-omethe-us/ussci-latex-template
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[12pt]{ussci}
+\documentclass[10pt,a4paper]{ecm}
 
 %======================================================================
-% Remove this in the real document
-\usepackage{blindtext}
+\usepackage{multicol}
+
 %======================================================================
 % BibLaTeX and biber (not BibTeX) are used to process the references,
 % so these packages must be installed on your system. All configuration
@@ -27,83 +35,92 @@
 % Add your bibliography file here, replacing template.bib
 \addbibresource{template.bib}
 %======================================================================
-% Replace "Reaction Kinetics" in the line below by your paper topic
-\newcommand\papertopic{Reaction Kinetics}
-%======================================================================
 
-\title{ Title of Paper }
+\title{Title of the Contributed Paper}
 
-\author[1]{Author Name}
-\author[1]{Author Name}
-\author[2]{Author Name}
-\author[2,*]{Author Name}
+\author[1]{A. Author}
+\author[2]{B. Author}
+\author[3,*]{C. Author}
 
-\affil[1]{Department, Institution, Address, Country}
-\affil[2]{Department, Institution, Address, Country}
-\affil[*]{Corresponding author: \email{author@university.edu}}
+\affil[1]{A. Author Affiliation}
+\affil[2]{B. Author Affiliation}
+\affil[3]{C. Author Affiliation}
+%\affil[*]{\normalsize Corresponding author: \email{author@university.edu}}
 
 \begin{document}
+
 \maketitle
+\thispagestyle{empty} %necessary to eliminate "1" on lead page
+
+%place corresponding author email address here:
+\blfootnote{*Corresponding author: \email{author@university.edu}\\Proceedings of the European Combustion Meeting 2021}
 
 %====================================================================
-\begin{abstract} % not to exceed 200 words
-Abstract should be between 150--200 words and should state briefly the purpose
-of the research, the principal results and major conclusions. An abstract is
-often presented separately from the article, so it must be able to stand alone.
-For this reason, references should be avoided, but if essential, then cite the
-author(s) and year(s). Also, non-standard or uncommon abbreviations should be
-avoided, but if essential they must be defined at their first mention in the
-abstract itself.
-\end{abstract}
-
-% Provide 2-4 keywords describing your research. Only abbreviations firmly
-% established in the field may be used. These keywords will be used for
-% sessioning/indexing purposes. Use \sep between each keyword.
-\begin{keyword}
-    Keyword1\sep Keyword2\sep Keyword3\sep Keyword4
-\end{keyword}
-
-%====================================================================
-\section{Introduction}
-
-You can use the following cite commands:
-
-Single reference with number only: \cite{Zhao2013}
-
-Multiple references with number only: \cite{Affleck1967,Turanyi2014,cantera}
-
-Single reference with two or fewer authors: \textcite{Affleck1967}
-
-Single reference with three or more authors: \textcite{Wang2011}
-
-Two references with authors: \textcite{Kee1996,Baumgardner2013}
-
-Three or more references with authors: \textcite{Kee1996,Baumgardner2013,Haworth2011}
-
-\section{Methods/Experimental}
-%
-\blindtext
+\section*{Abstract} % not to exceed 200 words
+\noindent The paper is prepared for inclusion in the proceedings of the ECM 2021 and follows the format established in previous European Combustion Meetings.
+The purpose of this document is to provide rules for obtaining high-quality proceedings.
+We urge you to submit your papers in the described format.
+The paper should begin with a four-to-six line one-column abstract as illustrated here.
+The rest of the material should be in two-column format with margin and spacing as illustrated below.
 
 
-\section{Results and Discussion}
-%
-\blindtext
+\begin{multicols}{2}
 
-\subsection{Results}
-%
-\blindtext
+\section*{Introduction}
+The purpose of this paper is to describe the official format of the papers to be included in the electronic Proceedings of the European Combustion Meeting 2021.
+The paper format is almost identical to the one used in Combustion and Flame.
+Papers are limited to six pages and 2 MB (in Portable Document Format - PDF)
 
-\section{Conclusions}
-%
-\blindtext
+\section*{Font, Layout, and Margins}
+The six-page paper should be set in Times New Roman font.
+The paper title should be at the top of the page, centered, in Times New Roman 12pt bold typeface with capitalized initials (Style “Title”).
+Names of authors (Style “Authors”) should be typed in Times New Roman 11pt and centered under the title.
+The affiliation of the authors has to be typed in Times New Roman 10pt (Style “Affiliation”) centered under the list of the authors’ names.
+Use the apexes 1, 2 etc to distinguish between the affiliations of authors.
+There should be a 12pt blank line between the title and the author’s name(s).
+The corresponding author should be identified by a superscript [*] and a footnote at the bottom of the page, as shown below. The footnote should run across both columns and should be separated from the text by a solid line starting at the left and of length equal to 5cm. 
+The phrase “Proceedings of the European Combustion Meeting 2021” should be added to the footnote.
+A short abstract (100 – 125 words) should follow the authors’ affiliations.
+There should be a 12pt blank line between the authors’ affiliation and the abstract title.
+The abstract should be typed in Types New Roman 10pt justified on both sides.
+The abstract should state the most important specific objectives, the major results, and the most significant conclusions of the paper.
+The remaining paper should be set in a two-column format with a Times New Roman 10pt font.
+There should be a 2.5cm margin on the top, left, and bottom sides of the pages and a 2cm margin on the right side of the pages.
+This will allow the two columns to be 8cm wide with a 0.5cm space between them.
+Illustrations that cannot be accommodated within one column width and associated captions may extend across the page.
+The orientation of the entire paper including all illustrations should be in the portrait format.
+Headings of sections within the paper should be bold faced and aligned to the left of the column.
+The text should begin on the next line after the heading. 
+here should be a 10pt blank line between the end of one section and the heading of the next section.
+Paragraphs should begin with 0.5cm indention and should be justified on both sides of the column.
 
-\blindtext
+\section*{Page Numbers}
+Page numbers should be printed, centered at the bottom of pages 2 – 6.
+Do not print a page number in the first page.
 
-\section{Acknowledgements}
+
+\subsection*{Contents}
+Each paper is expected to contain sections entitled Introduction, Conclusions, Acknowledgements, and References.
+The additional section headings depend on the individual paper.
+References should be prepared in the format used in {\it Combustion and Flame}.
+
+\section*{Illustrations}
+The illustrations and their captions should be included within the manuscript at a location closest to the first reference describing them. 
+The labels, symbols and other information on the illustrations should be no smaller than 10 points. 
+Illustrations may be in color or black and white, but all non-illustration text (including captions) must be in black.
+
+\section*{Introduction}
+Mandatory section
+
+\section*{Conclusion}
+Mandatory section
+
+\section*{Acknowledgements}
+Mandatory section.
 This research was funded by \ldots
 
-\noindent\textbf{Page Limits:} The total length of the paper including references should be limited to 10 pages.
-
 \printbibliography
+
+\end{multicols}
 
 \end{document}
