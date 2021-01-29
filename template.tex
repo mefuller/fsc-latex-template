@@ -23,10 +23,10 @@
 % http://creativecommons.org/licenses/by/4.0/.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[10pt,a4paper]{ecm}
+\documentclass[twocolumn,10pt,a4paper]{ecm}
 
 %======================================================================
-\usepackage{multicol}
+%place additional packages here
 
 %======================================================================
 % BibLaTeX and biber (not BibTeX) are used to process the references,
@@ -48,7 +48,8 @@
 %\affil[*]{\normalsize Corresponding author: \email{author@university.edu}}
 
 \begin{document}
-
+\twocolumn[
+\begin{@twocolumnfalse}
 \maketitle
 \thispagestyle{empty} %necessary to eliminate "1" on lead page
 
@@ -63,8 +64,9 @@ We urge you to submit your papers in the described format.
 The paper should begin with a four-to-six line one-column abstract as illustrated here.
 The rest of the material should be in two-column format with margin and spacing as illustrated below.
 
-
-\begin{multicols}{2}
+\end{@twocolumnfalse}
+\vspace{10pt}
+]
 
 \section*{Introduction}
 The purpose of this paper is to describe the official format of the papers to be included in the electronic Proceedings of the European Combustion Meeting 2021.
@@ -78,7 +80,7 @@ Names of authors (Style “Authors”) should be typed in Times New Roman 11pt a
 The affiliation of the authors has to be typed in Times New Roman 10pt (Style “Affiliation”) centered under the list of the authors’ names.
 Use the apexes 1, 2 etc to distinguish between the affiliations of authors.
 There should be a 12pt blank line between the title and the author’s name(s).
-The corresponding author should be identified by a superscript [*] and a footnote at the bottom of the page, as shown below. The footnote should run across both columns and should be separated from the text by a solid line starting at the left and of length equal to 5cm. 
+The corresponding author should be identified by a superscript [*] and a footnote at the bottom of the page, as shown below. The footnote should run across both columns and should be separated from the text by a solid line starting at the left and of length equal to 5cm.
 The phrase “Proceedings of the European Combustion Meeting 2021” should be added to the footnote.
 A short abstract (100 – 125 words) should follow the authors’ affiliations.
 There should be a 12pt blank line between the authors’ affiliation and the abstract title.
@@ -90,7 +92,7 @@ This will allow the two columns to be 8cm wide with a 0.5cm space between them.
 Illustrations that cannot be accommodated within one column width and associated captions may extend across the page.
 The orientation of the entire paper including all illustrations should be in the portrait format.
 Headings of sections within the paper should be bold faced and aligned to the left of the column.
-The text should begin on the next line after the heading. 
+The text should begin on the next line after the heading.
 here should be a 10pt blank line between the end of one section and the heading of the next section.
 Paragraphs should begin with 0.5cm indention and should be justified on both sides of the column.
 
@@ -105,8 +107,8 @@ The additional section headings depend on the individual paper.
 References should be prepared in the format used in {\it Combustion and Flame}.
 
 \section*{Illustrations}
-The illustrations and their captions should be included within the manuscript at a location closest to the first reference describing them. 
-The labels, symbols and other information on the illustrations should be no smaller than 10 points. 
+The illustrations and their captions should be included within the manuscript at a location closest to the first reference describing them.
+The labels, symbols and other information on the illustrations should be no smaller than 10 points.
 Illustrations may be in color or black and white, but all non-illustration text (including captions) must be in black.
 
 \section*{Introduction}
@@ -121,6 +123,6 @@ This research was funded by \ldots
 
 \printbibliography
 
-\end{multicols}
+\balance %cause columns on final page to be of equal length
 
 \end{document}
