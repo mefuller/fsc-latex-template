@@ -19,7 +19,6 @@ The template uses the following
 packages that must be installed with their dependencies:
 
 * authblk
-* balance
 * biblatex
 * biber
 * calc

@@ -65,8 +65,8 @@ We urge you to submit your papers in the described format.
 The paper should begin with a four-to-six line one-column abstract as illustrated here.
 The rest of the material should be in two-column format with margin and spacing as illustrated below.
 
-
-\begin{multicols}{2}
+% \begin{multicols*}{2} % use this environment for unbalanced columns
+\begin{multicols}{2} % use this environment for balanced columns
 \section*{Introduction}
 The purpose of this paper is to describe the official format of the papers to be included in the electronic Proceedings of the European Combustion Meeting 2021.
 The paper format is almost identical to the one used in Combustion and Flame.
@@ -121,8 +121,8 @@ Mandatory section.
 This research was funded by \ldots
 
 \printbibliography
-\end{multicols}
 
-\balance %cause columns on final page to be of equal length
+% \end{multicols*} % use this environment for unbalanced columns
+\end{multicols} % use this environment for balanced columns
 
 \end{document}

@@ -56,9 +56,6 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{mathptmx}
 
-
-\usepackage{balance}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Redefine \maketitle to produce the typical ECM paper header
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
