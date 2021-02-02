@@ -23,7 +23,7 @@
 % http://creativecommons.org/licenses/by/4.0/.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[twocolumn,10pt,a4paper]{ecm}
+\documentclass[10pt,a4paper]{ecm} %twocolumn,
 
 %======================================================================
 %place additional packages here
@@ -39,35 +39,34 @@
 \title{Title of the Contributed Paper}
 
 \author[1]{A. Author}
-\author[2]{B. Author}
-\author[3,*]{C. Author}
+\author[2]{\underline{B. Author}} %underline presenting author
+\author[3]{C. Author$^{*,}$} %star corresponding author; add comma if affiliation superscripts also present
 
 \affil[1]{A. Author Affiliation}
 \affil[2]{B. Author Affiliation}
 \affil[3]{C. Author Affiliation}
-%\affil[*]{\normalsize Corresponding author: \email{author@university.edu}}
+\newcommand{\corremail}{author@university.edu} %corresponding author email address
 
 \begin{document}
-\twocolumn[
-\begin{@twocolumnfalse}
+
 \maketitle
+
 \thispagestyle{empty} %necessary to eliminate "1" on lead page
 
 %====================================================================
-\section*{Abstract} % not to exceed 200 words
+\section*{Abstract % not to exceed 200 words
+	\blfootnote{ % slightly hacky insertion of corresponding author footnote
+		*Corresponding author: \email{\corremail}\\Proceedings of the European Combustion Meeting 2021
+	}
+}
 \noindent The paper is prepared for inclusion in the proceedings of the ECM 2021 and follows the format established in previous European Combustion Meetings.
 The purpose of this document is to provide rules for obtaining high-quality proceedings.
 We urge you to submit your papers in the described format.
 The paper should begin with a four-to-six line one-column abstract as illustrated here.
 The rest of the material should be in two-column format with margin and spacing as illustrated below.
 
-\end{@twocolumnfalse}
-\vspace{10pt}
-]
 
-%place corresponding author email address here:
-\blfootnote{*Corresponding author: \email{author@university.edu}\\Proceedings of the European Combustion Meeting 2021}
-
+\begin{multicols}{2}
 \section*{Introduction}
 The purpose of this paper is to describe the official format of the papers to be included in the electronic Proceedings of the European Combustion Meeting 2021.
 The paper format is almost identical to the one used in Combustion and Flame.
@@ -122,6 +121,7 @@ Mandatory section.
 This research was funded by \ldots
 
 \printbibliography
+\end{multicols}
 
 \balance %cause columns on final page to be of equal length
 

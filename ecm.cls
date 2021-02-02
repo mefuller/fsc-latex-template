@@ -72,8 +72,6 @@
 	\end{tabular}\par}
 \end{center}%
 \par
-\vspace{-3.0em} %zero out vertical space
-\vspace{12pt}
 }
 
 {\endlist}
@@ -127,6 +125,8 @@
 	\hrule width 5cm height 1pt
 	\kern 2pt
 }
+
+\RequirePackage{multicol}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Definition of Bibliography Styles

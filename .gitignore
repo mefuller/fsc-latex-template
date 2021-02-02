@@ -1,5 +1,7 @@
 ## template files
 template.pdf
+*.doc*
+*.docx*
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
