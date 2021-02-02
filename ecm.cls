@@ -86,11 +86,12 @@
 \renewcommand\Authfont{\fontsize{11pt}{13.2pt}\selectfont}
 \renewcommand\Affilfont{\fontsize{10pt}{12pt}\selectfont}
 
-\newcommand\blfootnote[1]{%
-	\begingroup
-	\renewcommand\thefootnote{}\footnote{\hspace{-1.8em}\normalsize #1}%
-	\addtocounter{footnote}{-1}%
-	\endgroup
+\newcommand\extrafootertext[1]{%
+	\bgroup
+	\renewcommand\thefootnote{\fnsymbol{footnote}}%
+	\renewcommand\thempfootnote{\fnsymbol{mpfootnote}}%
+	\footnotetext[0]{\hspace{-1.8em}\normalsize #1}%
+	\egroup
 }
 
 \RequirePackage{hyperref}
