@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          CallPapersPosters.tex
+%
+% A template form for collecting conference submissions
+% The current form copies the text and fields of the FSC submission
+%
+% Author:
+%     Mark E. Fuller, RWTH Aachen University
+%
+% This work is licensed under the Creative Commons Attribution 4.0
+% International License. To view a copy of this license, visit
+% http://creativecommons.org/licenses/by/4.0/.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt,a4paper]{article}
+
+%======================================================================
+%place additional packages here
+\usepackage{geometry}
+\geometry{
+	%margin=1in,
+	top=2.5cm,
+	bottom=2.5cm,
+	left=2.5cm,
+	right=2cm,
+	headheight=14.5pt,
+	footskip=0.5in,
+	headsep=0.5in
+}
+
+\setlength{\parindent}{0pt}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\fancypagestyle{plain}{%
+	\fancyhf[C]{}%
+	\fancyhf[L]{\fontsize{16}{19} \bf Call for Papers and Posters\\}%
+	\fancyhf[R]{\includegraphics[width=0.45\linewidth]{figures/FSC_RWTH.jpg}}%
+	\fancyfoot[C]{}%
+	\fancyfoot[L]{}%
+	\fancyfoot[R]{}%
+	\renewcommand{\headrulewidth}{0pt}%
+	\renewcommand{\footrulewidth}{0pt}
+}
+\pagestyle{plain}
+
+\usepackage{multicol}
+\usepackage{hyperref}
+
+% Make radio buttons completely deselectable by removing the "Radio" flag
+% (http://tex.stackexchange.com/a/74543/3323)
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\HyField@FlagsRadioButton}{\HyField@SetFlag{Ff}{Radio}}{}{}{}
+\makeatother
+\def\DefaultOptionsofRadio{print}
+%======================================================================
+
+\title{\bf Fuel Science - From Production to Propulsion}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+{
+\centering
+{\bf 9\textsuperscript{th} International Conference}\\
+of the Cluster of Excellence\\
+``The Fuel Science Center''\\
+June 22 to 24, 2021, Eurogress Aachen, Germany\\}
+
+\section*{}
+Please submit this document until February 28, 2021 to \href{info@fuelcenter.rwth-aachen.de}{info@fuelcenter.rwth-aachen.de}.
+
+This form will serve as application for your desired kind of conference participation.
+You can choose between an oral presentation and handing in a poster.
+Please use the template below to hand in an abstract of your oral presentation (should not exceed two pages including graphics; please keep the formatting as it is: font “Arial”, font size 11, line spacing 1.08 cm).
+In contrast to last year, we avoid a multi-stage procedure with a short abstract for this conference.
+However, the abstracts will still be reviewed by the professors and then included in our book of abstracts.
+In case of a poster, hand in a short summary.
+Please assign your topic to one of the sessions contained in the drop-down menu.
+You will be informed as soon as possible if your abstract has been accepted.
+
+\begin{Form}[action=mailto:info@fuelcenter.rwth-aachen.de?subject={FSC 9th International Conference Submission},encoding=html, method=post]
+\section*{}
+\begin{multicols}{2}
+	{\bf Please choose \underline{one option:}}\\
+	\ChoiceMenu[radio,radiosymbol=\ding{54},default={},name=presentation,charsize=14pt,width=1em]{}{=poster}
+	Poster Presentation\\
+	\ChoiceMenu[radio,radiosymbol=\ding{54},default={},name=presentation,charsize=14pt,width=1em]{}{=oral} Oral Presentation
+
+	\columnbreak
+
+	{\bf Session:}\\
+	\ChoiceMenu[combo, name=percorso, charsize=10pt, width=\linewidth, default=Please choose a session]{}{{Fuels from Renewable Electricity, Biomass, and CO$_2$}, Fuel Design and Synthesis, Combustion Process and Exhaust Gas Aftertreatment, System Perspective and Sustainable Value Chains, {Impact of Renewable Fuels on Environment, Economics, and Society}}
+\end{multicols}	
+
+\begin{tabular}{ll}
+	% \makebox taken from https://tex.stackexchange.com/questions/79958/hyperref-textfield-inside-the-table-cell
+	{\bf Poster/Presentation Title:}
+	&\makebox{\TextField[name=title,width=0.5\linewidth,charsize=10pt]{}}\\
+	
+	{\bf Author's name(s):}
+	&\makebox{\TextField[name=authors,width=0.5\linewidth,charsize=10pt]{}}\\
+	
+	{\bf Affiliation:}
+	&\makebox{\TextField[name=affiliation,width=0.5\linewidth,charsize=10pt]{}}\\
+	
+	{\bf Speaker's name:}
+	&\makebox{\TextField[name=speaker,width=0.5\linewidth,charsize=10pt]{}}\\
+	
+	{\bf E-mail address:}
+	&\makebox{\TextField[name=email,width=0.5\linewidth,charsize=10pt]{}}
+\end{tabular}
+
+\section*{}	
+\begin{center}
+	\Submit[export=PDF]{\bf Submit}
+	\hspace{3cm}
+	\Reset{\bf Clear}
+\end{center}
+\end{Form}
+\end{document}

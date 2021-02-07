@@ -10,8 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 ### Changed
-- European Combustion Meeting (ECM) class file added
-- Template utilizes ECM format
+- Fuel Science Center (FSC) class file added
+- Template utilizes FSC format
+- Created fillable submission form for FSC abstracts
 
 ### Removed
 
